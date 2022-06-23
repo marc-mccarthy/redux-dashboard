@@ -1,0 +1,49 @@
+##############################################
+# DO NOT TOUCH                               #
+#                                            #
+# For Prime Instructional Staff use only.    #
+##############################################
+
+###########################
+#
+# Github actions workflow
+# https://github.com/features/actions
+#
+# Runs `npm test` to execute the tests defined within this repo.
+# 
+# NOTE: You **must** connect to github over SSH, to push changes to this file.
+#  otherwise, you may receive an authorization error. This appears to be
+#  a bug in Github Actions. 
+#  See https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh
+#
+###########################
+
+
+    name: Test
+
+    on: [push]
+
+    jobs:
+      build:
+        name: Test Run
+        runs-on: Ubuntu-20.04
+
+        steps:
+          - name: Checkout repo code
+            uses: actions/checkout@v2
+          - name: Install dependencies
+            run: npm ci
+          - name: Run tests
+            run: npm test
+            env:
+              # The CI env var is a hint to our testing scripts
+              # to report results in the correct format, etc
+              CI: true
+          - name: Save testResults artifacts
+            uses: actions/upload-artifact@v2
+            if: always()
+            with:
+              name: testResults
+              path: |
+                testResults.json
+                testResults.html

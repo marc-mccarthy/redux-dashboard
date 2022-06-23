@@ -1,0 +1,35 @@
+{
+  "name": "redux-dashboard-code-challenge",
+  "version": "0.2.0",
+  "private": true,
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^5.0.1",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "client": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "./src/tests/test.sh",
+    "test:watch": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "html-validator": "^5.1.17",
+    "jest-expect-message": "^1.0.2",
+    "wait-for-expect": "^3.0.2"
+  }
+}
