@@ -1,6 +1,5 @@
 # Redux Code Challenge
 
-
 ## INSTRUCTIONS
 Fork this repository and clone it to your computer. Run `npm install` and `npm run client`.
 
