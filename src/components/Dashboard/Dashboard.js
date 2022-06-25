@@ -5,15 +5,13 @@ import React from 'react';
 // YOU SHOULD DISPLAY THE COUNT OF PEOPLE CURRENTLY ON BOARD
 
 function Dashboard() {
-  
-  return (
-    <div>
-      <h2>Dashboard</h2>
-
-      <p>SPEED: GOES HERE</p>
-      <p>PASSENGER COUNT: GOES HERE</p>
-    </div>
-  );
+    return (
+        <div>
+            <h2>Dashboard</h2>
+            <p>SPEED: GOES HERE</p>
+            <p>PASSENGER COUNT: GOES HERE</p>
+        </div>
+    );
 }
 
 export default Dashboard;
