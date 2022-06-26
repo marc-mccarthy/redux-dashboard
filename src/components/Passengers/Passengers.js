@@ -17,9 +17,13 @@ function Passengers() {
     }
 
     const addPassenger = () => {
-        sendPassenger().then(() => {
-            setPassenger('');
-        })
+        if (passenger === '') {
+            alert('Must enter a name.')
+        } else {
+            sendPassenger().then(() => {
+                setPassenger('');
+            })
+        }
     }
 
     const sendPassenger = async() => {
@@ -32,7 +36,7 @@ function Passengers() {
             <input onChange={changeInput} type="text" name="name" value={passenger} placeholder="Enter Name"/>
             <button onClick={addPassenger}>Add Passenger</button>
             <ul>
-                {allPassengers.map(person => (<li>{person}</li>))}
+                {allPassengers.map((person, index) => (<li>{index + 1}. {person}</li>))}
             </ul>
         </div>
     )
