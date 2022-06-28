@@ -6,9 +6,9 @@ import {createStore, combineReducers} from 'redux'
 import {Provider} from 'react-redux';
 
 // put your reducers here!
-const allPassengers = (state = [], action) => {
+const allPassengers = (state = ['Marc'], action) => {
     if (action.type === 'ADD_PASSENGER') {
-        state = [...state, action.payload];
+        state = [...state, action.payload]; 
     }
     return state;
 }

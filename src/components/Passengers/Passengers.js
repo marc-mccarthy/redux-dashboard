@@ -9,7 +9,7 @@ function Passengers() {
     const dispatch = useDispatch();
     const allPassengers = useSelector(store => store.allPassengers);
 
-    const [passenger, setPassenger] = useState('Marc');
+    const [passenger, setPassenger] = useState('');
 
     const changeInput = () => {
         setPassenger(event.target.value);
